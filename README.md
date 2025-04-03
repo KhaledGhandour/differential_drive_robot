@@ -52,10 +52,10 @@ Built using ROS (Robot Operating System) for sensor fusion and navigation.
 
     roslaunch differential_drive_robot robot_description.launch
 
-# Start SLAM mapping
+### Start SLAM mapping
 roslaunch diffbot_navigation gmapping.launch
 
-# Run teleoperation
+### Run teleoperation
 rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 
 
