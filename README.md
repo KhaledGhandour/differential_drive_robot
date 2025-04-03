@@ -1,0 +1,91 @@
+# Differential Drive Robot with Multi-Sensor Integration 🤖
+ ROS Noetic | URDF | Gazebo | Multi-Sensor Integration
+(Using Ultrasonic, IMU, Mono Camera,Camera, 2D & 3D LiDAR)
+
+
+
+
+## 📌 Overview
+
+This project is an autonomous Differential Drive Robot equipped with:
+
+- **2D Lidar (A2 RPLIDAR):** Provides 360-degree distance measurements to create a 2D map of the robot’s surroundings, essential for obstacle detection and mapping.
+- **Camera (RealSense D435):** Captures depth and color images for advanced perception tasks, including object recognition and spatial understanding.
+- **IMU (MPU 6050):** Measures acceleration and angular velocity to provide orientation and movement data, crucial for stabilization and navigation.
+- **Ultrasonic Sensor (HC-SR04):** Uses sound waves to measure distance to nearby objects, useful for collision avoidance and distance sensing.
+- **Mono Camera** (object detection & visual navigation)
+- **3D LiDAR** (high-resolution 3D perception)
+
+Built using ROS (Robot Operating System) for sensor fusion and navigation.
+
+
+# Getting Started
+## Prerequisites
+
+    Ubuntu 20.04 LTS
+
+    ROS Noetic (full desktop recommended)
+
+    Gazebo 11
+
+    ROS Noetic 
+
+    Python 3.8+
+
+    rplidar_ros (for 2D LiDAR)
+
+    realsense-ros (if using Intel RealSense)
+
+## 🚀 Installation
+
+### Clone the repository:
+    
+    git clone https://github.com/KhaledGhandour/differential_drive_robot.git
+    cd differential_drive_robot
+
+### Install dependencies:
+
+    sudo apt install ros-noetic-rplidar-ros ros-noetic-teleop-twist-keyboard
+    pip install -r requirements.txt
+
+### Run the ROS launch file:
+
+    roslaunch differential_drive_robot robot_description.launch
+
+# Start SLAM mapping
+roslaunch diffbot_navigation gmapping.launch
+
+# Run teleoperation
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+
+
+
+
+
+## 🔧 Key Algorithms
+
+### |Feature|                        | Algorithm  |                                 | Description|
+                                  |-----------|-------|---------|
+
+- **Obstacle Avoidance**             | RRT (Rapidly-exploring Random Tree) |           | Uses LiDAR + Ultrasonic data |
+
+- **Object Detection**	              |YOLOv5 / SSD  |                        |Processes mono camera feed |
+
+- **SLAM**                          | Gmapping / Cartographer |                     | 2D LiDAR-based mapping |
+
+- **3D Perception**                  |PCL (Point Cloud Library) |                 | Processes 3D LiDAR data |
+
+
+
+
+
+
+## Contact 📧
+
+**Developer:**  Khaled Ghandour
+
+**Email:** khaled.essam.200230@gmail.com
+
+**Project Link:** https://github.com/KhaledGhandour/skid_steer_robot.git
+
+    
