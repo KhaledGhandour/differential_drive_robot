@@ -50,11 +50,13 @@ Built using ROS (Robot Operating System) for sensor fusion and navigation.
 
 ### Run the ROS launch file:
 
--roslaunch differential_drive_robot robot_description.launch
+   roslaunch differential_drive_robot robot_description.launch
+   
 
 ## Start SLAM mapping
 
    roslaunch diffbot_navigation gmapping.launch
+   
 
 ## Run teleoperation
 
